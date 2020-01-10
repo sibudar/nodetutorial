@@ -1,10 +1,8 @@
 const express = require('express') ;
 const app = express() ; 
+const customerRoute = require('./router/customerRoute') ;
 
-
-app.get('/' , (req, res , next)=> {
-    res.send({response: 'hello'})
-})
+app.use('/api/v1/customer' , customerRoute );
 
 
 module.exports = app ;
